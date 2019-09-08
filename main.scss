@@ -1,0 +1,183 @@
+/* Variables to be re-written should always be placed before: @import  */
+
+$theme-colors: ("primary": #521751,
+    "danger": #ff4136,
+    "success": #ffffff);
+
+//@import "node_modules/bootstrap/scss/bootstrap";
+
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/badge";
+@import "node_modules/bootstrap/scss/carousel";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/pagination";
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+	background-color: #232642;
+	h2 {
+		margin-top: 10px;
+		color: #666666;
+		font-size: 1.3em;
+		font-weight: 400;
+	}
+}
+
+.main-box {
+    background-color: #EBEBEB;
+}
+
+/* HEADER
+-------------------------------------------------- */
+
+header {
+    .container {
+        background-color: #1E2140;
+		height: 70px;
+		.logo-pmweb {
+			width: 104px;
+			height: 70px;
+			margin-left: 20px;
+		}
+		.rockin-hand {
+			width: 17px;
+			height: 70px;
+			margin-right: 20px;
+
+		}
+    }
+}
+
+.overview {
+	padding: 0 30px;
+	h2 {
+		margin-top: 35px;
+		margin-left: 5px;
+	}
+	h3 {
+		color: #666666;
+		font-size: 0.9em;
+		font-weight: 400;
+		margin-bottom: 20px;
+		.icones {
+			width: 18px;
+			margin-top: -1px;
+			margin-right: 8px;
+			float: left;
+		}
+	}
+	
+
+	.col-12, .col-md-4 {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: #FFFFFF;
+		border-radius: 14px;
+		-moz-border-radius: 14px;
+		-webkit-border-radius: 14px;
+		border: 6px solid #EBEBEB;
+	}
+	.miolo {
+		padding-top: 10px;
+		text-align: center;
+		vertical-align: center;		
+		min-height: 110px;
+		.dados {
+			font-size: 2.7em;
+			color: #777777;
+			position: relative;
+		}
+		.badge-success {
+			background-color: #32bb9c;
+			color: #FFFFFF;
+			padding: 5px 10px 5px 10px;
+		}	
+		.badge-danger {
+			color: #FFFFFF;
+			padding: 5px 10px 5px 10px;
+		}		
+	}
+	.foot {
+		text-align: right;
+		.far {
+			color: #cccccc;
+		}
+	}
+	.pagination {
+		margin-top: 20px;
+		margin-bottom: 50px;
+		.page-link {
+			cursor: pointer;
+		}
+		.page-item.active .page-link {
+			z-index: 1;
+			color: #fff;
+			background-color: #33ACD7;
+			border-color: #33ACD7;
+		}
+	}
+}
+
+
+
+footer {
+	background-color: #1E2140;
+	&.container {
+		height: 110px;
+		.logo-pmweb {
+			width: 100px;
+			height: 110px;
+			margin-left: 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+/* RESPONSIVE CSS
+  -------------------------------------------------- */
+
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1150px;
+	}
+}
+
+@media (min-width: 40em) {
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}

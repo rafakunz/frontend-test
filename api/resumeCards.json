@@ -1,0 +1,16 @@
+{
+	"cards":{
+		"hours_music":{
+			"hours": 235,
+			"percent_diference": 130
+		},
+		"quantity_bands":{
+			"bands": 48,
+			"percent_diference": 98
+		},
+		"lost_artists":{
+			"losts": 12,
+			"percent_diference": 37
+		}
+	}
+}
