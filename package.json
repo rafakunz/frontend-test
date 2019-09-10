@@ -15,5 +15,13 @@
     "vue-axios": "^2.1.4"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafakunz/frontend-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rafakunz/frontend-test/issues"
+  },
+  "homepage": "https://github.com/rafakunz/frontend-test#readme"
 }

@@ -13,16 +13,14 @@ $theme-colors: ("primary": #521751,
 
 // Optional
 @import "node_modules/bootstrap/scss/grid";
-@import "node_modules/bootstrap/scss/navbar";
 @import "node_modules/bootstrap/scss/badge";
-@import "node_modules/bootstrap/scss/carousel";
 @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/reboot";
 @import "node_modules/bootstrap/scss/buttons";
-@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/tables";
 @import "node_modules/bootstrap/scss/pagination";
 
 /* GLOBAL STYLES
@@ -120,21 +118,66 @@ header {
 		}
 	}
 	.pagination {
+    font-size: 0.9em;
+    font-weight: 500;
 		margin-top: 20px;
 		margin-bottom: 50px;
 		.page-link {
+      background-color: transparent;
 			cursor: pointer;
+      border-radius: 50%;
+      margin: 5px;
+      border: none;
+      height: 26px;
+      width: 26px;
+      line-height: 12px;
+      padding: 6px 9px;
 		}
+    
+    .page-item:first-child .page-link {
+      border-radius: 20%;
+      background-color: #DEDEDE;
+      margin: 8px 5px 8px 5px;
+      border: none;
+      height: 20px;
+      width: 20px;
+      padding: 3px 6px;
+      
+
+    }
+    .page-item:last-child .page-link {
+      border-radius: 20%;
+      background-color: #DEDEDE;
+      margin: 8px 5px 8px 5px;
+      border: none;
+      height: 20px;
+      width: 20px;
+      padding: 3px 7px;
+    }
 		.page-item.active .page-link {
 			z-index: 1;
 			color: #fff;
 			background-color: #33ACD7;
 			border-color: #33ACD7;
+      
 		}
 	}
 }
 
-
+#musicas table {
+  color: #666666;
+  font-size: 0.9em;
+  thead th {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+  th {
+    font-weight: 500;
+  }
+  th, td {
+    text-align: right;
+  }
+}
 
 footer {
 	background-color: #1E2140;
