@@ -6639,6 +6639,8 @@ header .container .rockin-hand {
 #musicas table {
   color: #666666;
   font-size: 0.9em;
+  margin-left: -15px;
+  width: 103%;
 }
 
 #musicas table thead th {
@@ -6652,6 +6654,10 @@ header .container .rockin-hand {
 
 #musicas table th, #musicas table td {
   text-align: right;
+}
+
+#musicas table th.last-col, #musicas table td.last-col {
+  padding-right: 30px;
 }
 
 footer {

@@ -167,6 +167,8 @@ header {
 #musicas table {
   color: #666666;
   font-size: 0.9em;
+  margin-left: -15px;
+  width: 103%;
   thead th {
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
@@ -176,6 +178,9 @@ header {
   }
   th, td {
     text-align: right;
+  }
+  th.last-col, td.last-col {
+    padding-right:30px;
   }
 }
 
