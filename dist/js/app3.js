@@ -1,15 +1,15 @@
 new Vue({
-    el: '#app',
+    el: '#app3',
     data() {
         return {
-            cards: null
+            musics: null
         }
     },
     mounted() {
         axios
-            .get('https://pmweb-dev.github.io/resumeCards.json')
+            .get('https://pmweb-dev.github.io/musics.json')
             .then(response => {
-                this.cards = response.data.cards
+                this.musics = response.data.musics
                 //console.log('++++',response.data.cards.hours_music.hours)
                 }
             )

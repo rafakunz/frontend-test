@@ -8,7 +8,7 @@
     <meta name="author" content="Rafael Kunz at PMWEB">
     <title>Pmweb Music Dashboard</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     
 
 
@@ -41,39 +41,22 @@
             </div>            
         </div>
     </header>    
-    <div class="container main-box" id="app">
+    <div class="container main-box">
         <!-- START OVERVIEW -->
         <div class="overview">
             <div class="row">                    
                 <h2>Overview</h2>                                       
             </div> 
-            <div class="row">
-                
-                <!-- <div class="col-12 col-md-4">
-                    <h3>
-                        <span class="icones"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" tabindex="0" width="100%" height="100%"><defs><style>.cls-2{fill:#999999;}</style></defs><title>Horas de música tocadas</title><g id="Camada_1" data-name="Camada 1"><path class="cls-2" d="M15,28.45A13.45,13.45,0,1,1,28.45,15,13.47,13.47,0,0,1,15,28.45Zm0-25.9A12.45,12.45,0,1,0,27.45,15,12.47,12.47,0,0,0,15,2.55Zm5.65,4.81h-.08l-9,2.93a.26.26,0,0,0-.17.24v8.17a2.23,2.23,0,0,0-1.32-.42,2.33,2.33,0,1,0,2.33,2.33V13.79l7.46-2.44V17a2.36,2.36,0,0,0-1.33-.42,2.33,2.33,0,1,0,2.33,2.33V7.61A.25.25,0,0,0,20.65,7.36ZM10.11,22a1.33,1.33,0,1,1,1.32-1.35v0h0A1.34,1.34,0,0,1,10.11,22Zm8.46-1.74a1.33,1.33,0,1,1,1.33-1.35v0h0A1.34,1.34,0,0,1,18.57,20.21ZM19.9,9.72v.58l-7.46,2.44V11.46h0v-.38L19.9,8.64V9.72Z"></path></g></svg></span>
-                        Horas de música tocadas
-                    </h3>                    
-                    <div class="miolo">
-                        <span v-for="horas in cards" class="dados">{{ horas.hours }}h</span>                        
-                        <div class="col">
-                            <span v-for="porcentagemHoras in cards" class="badge badge-pill badge-success"><i class="fas fa-caret-up"></i> {{ porcentagemHoras.percent_diference }}%</span>
-                        </div>                                                                                       
-                    </div>
-                    <div class="foot">
-                        <i class="far fa-question-circle"></i>
-                    </div>                   
-                </div> -->
-                
+            <div class="row" id="app">
                 <div class="col-12 col-md-4">
                     <h3>
                         <span class="icones"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" tabindex="0" width="100%" height="100%"><defs><style>.cls-2{fill:#999999;}</style></defs><title>Horas de música tocadas</title><g id="Camada_1" data-name="Camada 1"><path class="cls-2" d="M15,28.45A13.45,13.45,0,1,1,28.45,15,13.47,13.47,0,0,1,15,28.45Zm0-25.9A12.45,12.45,0,1,0,27.45,15,12.47,12.47,0,0,0,15,2.55Zm5.65,4.81h-.08l-9,2.93a.26.26,0,0,0-.17.24v8.17a2.23,2.23,0,0,0-1.32-.42,2.33,2.33,0,1,0,2.33,2.33V13.79l7.46-2.44V17a2.36,2.36,0,0,0-1.33-.42,2.33,2.33,0,1,0,2.33,2.33V7.61A.25.25,0,0,0,20.65,7.36ZM10.11,22a1.33,1.33,0,1,1,1.32-1.35v0h0A1.34,1.34,0,0,1,10.11,22Zm8.46-1.74a1.33,1.33,0,1,1,1.33-1.35v0h0A1.34,1.34,0,0,1,18.57,20.21ZM19.9,9.72v.58l-7.46,2.44V11.46h0v-.38L19.9,8.64V9.72Z"></path></g></svg></span>
                         Horas de música tocadas
                     </h3>                    
                     <div class="miolo">
-                        <span class="dados">236h</span>                        
+                        <span class="dados">{{cards.hours_music.hours}}h</span>                        
                         <div class="col">
-                            <span class="badge badge-pill badge-success"><i class="fas fa-caret-up"></i> 184%</span>
+                            <span class="badge badge-pill badge-success"><i class="fas fa-caret-up"></i> {{cards.hours_music.percent_diference}}%</span>
                         </div>                                                                                       
                     </div>
                     <div class="foot">
@@ -86,9 +69,9 @@
                         Quantidade de bandas de rock
                     </h3>
                     <div class="miolo">
-                        <span class="dados">38</span>                        
+                        <span class="dados">{{cards.quantity_bands.bands}}</span>                        
                         <div class="col">
-                            <span class="badge badge-pill badge-success"><i class="fas fa-caret-up"></i> 184%</span>
+                            <span class="badge badge-pill badge-success"><i class="fas fa-caret-up"></i> {{cards.quantity_bands.percent_diference}}%</span>
                         </div>                                                                                       
                     </div>
                     <div class="foot">
@@ -101,9 +84,9 @@
                         Perdas precoces de artistas incríveis
                     </h3>
                     <div class="miolo">
-                        <span class="dados">4</span>                        
+                        <span class="dados">{{cards.lost_artists.losts}}</span>                        
                         <div class="col">
-                            <span class="badge badge-pill badge-danger"><i class="fas fa-caret-up"></i> 25%</span>
+                            <span class="badge badge-pill badge-danger"><i class="fas fa-caret-up"></i> {{cards.lost_artists.percent_diference}}%</span>
                         </div>                                                                                       
                     </div>
                     <div class="foot">
@@ -112,12 +95,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-12">
+                <div class="col-12 col-md-12" style="width:100%; height:400px;">
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                 </div>
             </div>
             <div class="row">                    
-                <h2>Músicas</h2>                                       
+                <h2>Músicas</h2>                                      
             </div>
             <div class="row" id="musicas">
                 <div class="col-12 col-md-12">
@@ -131,77 +114,15 @@
                             <th scope="col" class="last-col">Artista</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <td scope="row" class="text-center">1</td>
-                            <td class="text-left">Riders on the Storm</td>
-                            <td>8</td>
-                            <td>10 Nov 2018</td>
-                            <td class="last-col">Sid Morris</td>
+                        <tbody id="app3"> 
+                          <tr v-for="musicas in musics">
+                            <td scope="row" class="text-center">{{musicas.id}}</td>
+                            <td class="text-left">{{musicas.title}}</td>
+                            <td>{{musicas.rate}}</td>
+                            <td>{{musicas.date_record}}</td>
+                            <td class="last-col">{{musicas.artist}}</td>
                           </tr>
-                          <tr>
-                            <td scope="row" class="text-center">2</td>
-                            <td class="text-left">Creatures of the Night</td>
-                            <td>4</td>
-                            <td>10 Nov 2018</td>
-                            <td class="last-col">Alex Turner</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">3</td>
-                            <td class="text-left">Back to the Moon</td>
-                            <td>9</td>
-                            <td>9 Nov 2018</td>
-                            <td class="last-col">Rafa Kunz</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">4</td>
-                            <td class="text-left">Sympathy for the Devil</td>
-                            <td>6</td>
-                            <td>9 Nov 2018</td>
-                            <td class="last-col">Love Chaleira</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">5</td>
-                            <td class="text-left">Rock and Roll Style</td>
-                            <td>10</td>
-                            <td>8 Nov 2019</td>
-                            <td class="last-col">Cake</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">6</td>
-                            <td class="text-left">No one Knows</td>
-                            <td>5</td>
-                            <td>5 Nov 2018</td>
-                            <td class="last-col">QOTSA</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">7</td>
-                            <td class="text-left">Hey Hey Hey</td>
-                            <td>2</td>
-                            <td>29 Out 2018</td>
-                            <td class="last-col">Bjork</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">8</td>
-                            <td class="text-left">Leather Jacket</td>
-                            <td>4</td>
-                            <td>28 Out 2019r</td>
-                            <td class="last-col">Blur</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">9</td>
-                            <td class="text-left">Make it Chu</td>
-                            <td>10</td>
-                            <td>16 Out 2018</td>
-                            <td class="last-col">QOTSA</td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="text-center">10</td>
-                            <td class="text-left">Praiera</td>
-                            <td>9</td>
-                            <td>16 Out 2018</td>
-                            <td class="last-col">The Fratelis</td>
-                          </tr>
+                          
 
                         </tbody>
                       </table>
@@ -246,13 +167,62 @@
     <!-- jQuery first, them popper.js, then bootstrap.js -->
     <script src="dist/js/jquery.slim.min.js"></script>
     <script src="popper.js/dist/popper.js"></script>
-    <script src="dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $('li').click(function () {
-            $(this).addClass('active').siblings().removeClass('active');
-        });
-    </script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.min.js"></script> 
+    
+    <!-- <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    cards: null
+                }
+            },
+            mounted() {
+                axios
+                    .get('https://pmweb-dev.github.io/resumeCards.json')
+                    .then(response => {
+                        this.cards = response.data.cards
+                        //console.log('++++',response.data.cards.hours_music.hours)
+                        }
+                    )
+            },
+        })
+    </script> -->
     <script src="dist/js/app.js"></script>
+    <script src="dist/js/app3.js"></script>
+    <script src="dist/js/paginador.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    var myChart = Highcharts.chart('container', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }]
+    });
+});
+    </script>
+
     <!--
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
