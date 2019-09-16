@@ -8,8 +8,9 @@
     <meta name="author" content="Rafael Kunz at PMWEB">
     <title>Pmweb Music Dashboard</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
 
 
     <!-- Bootstrap core CSS 
@@ -95,8 +96,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-12" style="width:100%; height:400px;">
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                <div class="col-12 col-md-12" id="container" style="width:100%; height:400px;">
                 </div>
             </div>
             <div class="row">                    
@@ -196,32 +196,110 @@
     <script src="dist/js/app3.js"></script>
     <script src="dist/js/paginador.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    var myChart = Highcharts.chart('container', {
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: 'Fruit Consumption'
-        },
-        xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
-        },
-        yAxis: {
+        Highcharts.chart('container', {
+
+            chart: {
+                type: 'areaspline'
+            },
+            plotOptions: {
+                areaspline: {
+                    fillOpacity: 0
+                }
+            },
             title: {
-                text: 'Fruit eaten'
-            }
-        },
-        series: [{
-            name: 'Jane',
-            data: [1, 0, 4]
-        }, {
-            name: 'John',
-            data: [5, 7, 3]
-        }]
-    });
-});
+                text: 'Horas de música x Quantidade de bandas',
+                align: 'left',
+                margin: 40,
+                y: 20
+            },
+
+            pane: {
+                size: '100%'
+            },
+
+            xAxis: {
+                categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                tickmarkPlacement: 'on',
+                lineWidth:  0
+            },
+
+            // yAxis: {
+            //     gridLineInterpolation: 'line',
+            //     lineWidth: 0,
+            //     min: 0,
+            //     title: 'off'
+            // },
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}h',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                title: {
+                    text: '',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: '',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            }],
+
+            tooltip: {
+                shared: true,
+                valueSuffix: ''
+            },
+
+            legend: {
+                align: 'right',
+                verticalAlign: 'top',
+                y: -65,
+                layout: 'horizontal'
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Horas de música',
+                data: [135,232,189,211,197,256,311,109,167,119,287,256],
+                pointPlacement: 'on',
+                color: '#7CB5EC',
+                tooltip: {
+                    valueSuffix: 'h'
+                },
+                marker: {
+                    enabled: false
+                }
+            }, {
+                name: 'Quantidade de bandas',
+                yAxis: 1,
+                data: [37,23,45,21,19,41,38,27,23,38,22,48],
+                pointPlacement: 'on',
+                color: '#5DFFB9',
+                tooltip: {
+                    valueSuffix: ''
+                },
+                marker: {
+                    enabled: false
+                }
+            }]
+
+        });
     </script>
+    
 
     <!--
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -7,7 +7,7 @@ new Vue({
     },
     mounted() {
         axios
-            .get('https://pmweb-dev.github.io/resumeCards.json')
+            .get('api/resumeCards.json')
             .then(response => {
                 this.cards = response.data.cards
                 //console.log('++++',response.data.cards.hours_music.hours)

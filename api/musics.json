@@ -1,0 +1,171 @@
+{
+	"musics":[
+	{
+		"id": 1,
+		"title": "Riders on the Storm",
+		"rate": 0,
+		"date_record": "2018-12-01",
+		"artist": "Gabriel Morrison"
+	},
+	{
+		"id": 2,
+		"title": "Creatures of the Night",
+		"rate": 8,
+		"date_record": "1982-10-13",
+		"artist": "Gustavo Simmons"
+	},
+	{
+		"id": 3,
+		"title": "Bark ah the Moon",
+		"rate": 10,
+		"date_record": "1983-11-15",
+		"artist": "Rodrigo Osbourne"
+	},
+	{
+		"id": 4,
+		"title": "Sympathy for the Devil",
+		"rate": 7,
+		"date_record": "1968-11-28",
+		"artist": "César Jagger"
+	},
+	{
+		"id": 5,
+		"title": "I Love Rock N'Roll",
+		"rate": 9,
+		"date_record": "1975-07-01",
+		"artist": "Caroline Jett"
+	},
+	{
+		"id": 6,
+		"title": "Creeping Death",
+		"rate": 10,
+		"date_record": "1984-11-23",
+		"artist": "Leonardo Hetfield"
+	},
+	{
+		"id": 7,
+		"title": "In My Darkest Hour",
+		"rate": 8,
+		"date_record": "1988-01-19",
+		"artist": "Arnaldo Mustaine"
+	},
+	{
+		"id": 8,
+		"title": "Bohemian Rhapsody",
+		"rate": 8,
+		"date_record": "1975-08-24",
+		"artist": "Matheus Mercury"
+	},
+		{
+		"id": 9,
+		"title": "Piece of My Heart",
+		"rate": 10,
+		"date_record": "1967-10-01",
+		"artist": "Mariana Joplin"
+	},
+	{
+		"id": 10,
+		"title": "Say Say Say",
+		"rate": 0,
+		"date_record": "1983-08-01",
+		"artist": "Tárik McCartney"
+	},
+	{
+		"id": 11,
+		"title": "Readhouse Blues",
+		"rate": 0,
+		"date_record": "1970-11-05",
+		"artist": "Gabriel Morrison"
+	},
+	{
+		"id": 12,
+		"title": "Rock and Roll All Nite",
+		"rate": 8,
+		"date_record": "1979-01-01",
+		"artist": "Gustavo Simmons"
+	},
+	{
+		"id": 13,
+		"title": "Iron Man",
+		"rate": 10,
+		"date_record": "1970-01-01",
+		"artist": "Rodrigo Osbourne"
+	},
+	{
+		"id": 14,
+		"title": "Angie",
+		"rate": 10,
+		"date_record": "1973-12-01",
+		"artist": "César Jagger"
+	},
+	{
+		"id": 15,
+		"title": "Cherry Bomb",
+		"rate": 9,
+		"date_record": "1976-05-05",
+		"artist": "Caroline Jett"
+	},
+	{
+		"id": 16,
+		"title": "One",
+		"rate": 9,
+		"date_record": "1988-02-02",
+		"artist": "Leonardo Hetfield"
+	},
+	{
+		"id": 17,
+		"title": "Enter Sandman",
+		"rate": 8,
+		"date_record": "1991-07-30",
+		"artist": "Arnaldo Mustaine"
+	},
+	{
+		"id": 18,
+		"title": "We Will Rock You",
+		"rate": 9,
+		"date_record": "1977-10-07",
+		"artist": "Matheus Mercury"
+	},
+		{
+		"id": 19,
+		"title": "Piece of My Heart",
+		"rate": 10,
+		"date_record": "2018-03-17",
+		"artist": "Mariana Joplin"
+	},
+	{
+		"id": 20,
+		"title": "Hey Jude",
+		"rate": 10,
+		"date_record": "1968-08-01",
+		"artist": "Tárik McCartney"
+	},
+	{
+		"id": 21,
+		"title": "Heaven's on Fire",
+		"rate": 8,
+		"date_record": "1975-01-01",
+		"artist": "Gustavo Simmons"
+	},
+	{
+		"id": 22,
+		"title": "Crazy Train",
+		"rate": 10,
+		"date_record": "1980-01-01",
+		"artist": "Rodrigo Osbourne"
+	},
+	{
+		"id": 23,
+		"title": "Paint it Black",
+		"rate": 10,
+		"date_record": "1966-03-6",
+		"artist": "César Jagger"
+    },
+    {
+		"id": 24,
+		"title": "No one knoks",
+		"rate": 10,
+		"date_record": "2008-28-7",
+		"artist": "Josh Kunz"
+	}]
+}
